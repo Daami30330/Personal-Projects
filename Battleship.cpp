@@ -27,7 +27,7 @@ vector<vector<char>> player_board(SIZE, vector<char>(SIZE, OCEAN));
 int ai_alive = 17;
 vector<vector<char>> ai_radar(SIZE, vector<char>(SIZE, OCEAN));
 vector<vector<char>> ai_board(SIZE, vector<char>(SIZE, OCEAN));
-vector<vector<int>> number_board(SIZE, vector<int>(SIZE, -1)); // Added number_board
+vector<vector<int>> number_board(SIZE, vector<int>(SIZE, -1)); 
 vector<int> ship_position; // Stores the first hit of ships which will be eliminated [row, col]
 vector<int> ship_length; // Stores the length of ship on first hit
 
@@ -35,7 +35,7 @@ vector<int> ship_length; // Stores the length of ship on first hit
 void print_board();
 int random_row(bool is_vertical, int size);
 int random_col(bool is_vertical, int size);
-bool is_ocean(int row, int col, vector<vector<char>>& b, vector<vector<int>>& number_board); // Updated function prototype
+bool is_ocean(int row, int col, vector<vector<char>>& b, vector<vector<int>>& number_board); 
 vector<vector<char>> make_ship(int size, vector<vector<char>>& board, int set_ship = -1);
 int ship_number(int r, int c, vector<vector<int>>& number_board);
 bool ship_sunk();
@@ -73,7 +73,7 @@ int random_col(bool is_vertical, int size) {
     }
 }
 
-bool is_ocean(int row, int col, vector<vector<char>>& b, vector<vector<int>>& number_board) { // Updated function definition
+bool is_ocean(int row, int col, vector<vector<char>>& b, vector<vector<int>>& number_board) { 
     if (row < 0 || row >= SIZE || col < 0 || col >= SIZE) {
         return false;
     }
